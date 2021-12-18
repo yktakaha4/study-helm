@@ -4,14 +4,16 @@ metadata:
   name: {{ .Release.Name }}-configmap
 data:
   myvalue: "Hello World"
+  {{- $relname := .Release.Name -}}
   {{- with .Values.favorite }}
   drink: {{ .drink | default "tea" | quote }}
   food: {{ .food | upper | quote }}
   {{- end }}
+  release: {{ $relname }}
   {{- if eq .Values.favorite.drink "coffee" }}
   mug: true
   {{- end }}
   toppings: |-
-    {{- range .Values.pizzaToppings }}
-    - {{ . | title | quote }}
+    {{- range $index, $topping := .Values.pizzaToppings }}
+    {{ $index }}: {{ $topping | title | quote }}
     {{- end }}
