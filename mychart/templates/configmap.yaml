@@ -18,3 +18,4 @@ data:
     {{- range $index, $topping := .Values.pizzaToppings }}
     {{ $index }}: {{ $topping | title | quote }}
     {{- end }}
+{{- include "mychart.app" . | nindent 2 }}
