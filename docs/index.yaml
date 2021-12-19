@@ -2,8 +2,25 @@ apiVersion: v1
 entries:
   happyhelm:
   - apiVersion: v1
+    appVersion: 1.1.0
+    created: "2021-12-19T23:51:28.223308049+09:00"
+    dependencies:
+    - name: envoy
+      repository: https://charts.helm.sh/stable
+      version: 1.5.0
+    description: Echo Happy Helming.
+    digest: 7365b01dd07ba5544b5bda9f56e5237f1c0294b9c856eee29e8bac83bc526d0a
+    maintainers:
+    - name: go_vargo
+    name: happyhelm
+    sources:
+    - https://github.com/yktakaha4/study-helm
+    urls:
+    - https://yktakaha4.github.io/study-helm/happyhelm-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v1
     appVersion: 1.0.0
-    created: "2021-12-19T22:09:45.401050762+09:00"
+    created: "2021-12-19T23:51:28.222036479+09:00"
     description: Echo Happy Helming.
     digest: ab5810c94bdce70157e9cae1450af12eeab83cf257da2a569ac9f31fcbab2523
     maintainers:
@@ -14,4 +31,4 @@ entries:
     urls:
     - https://yktakaha4.github.io/study-helm/happyhelm-1.0.0.tgz
     version: 1.0.0
-generated: "2021-12-19T22:09:45.400601717+09:00"
+generated: "2021-12-19T23:51:28.221536379+09:00"
