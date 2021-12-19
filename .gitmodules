@@ -4,3 +4,6 @@
 [submodule "go-happyhelming"]
 	path = go-happyhelming
 	url = https://github.com/govargo/go-happyhelming
+[submodule "sample-charts"]
+	path = sample-charts
+	url = https://github.com/govargo/sample-charts
