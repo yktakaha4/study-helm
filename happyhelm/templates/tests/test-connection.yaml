@@ -16,5 +16,5 @@ spec:
     command:
     - curl
     args:
-    - http://{{ include "happyhelm.fullname" . }}:{{ .Values.service.port }}
+    - http://{{ .Values.envoy.service.name }}:{{ .Values.envoy.service.ports.n0.port }}
   restartPolicy: Never

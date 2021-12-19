@@ -3,7 +3,7 @@ apiVersion: v1
 metadata:
   name: {{ include "happyhelm.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "happyhelm.name" . }}
+    app.kubernetes.io/name: {{ .Values.service.name }}
     helm.sh/chart: {{ include "happyhelm.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}

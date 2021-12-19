@@ -1,2 +1,4 @@
 .envrc
-/*.tgz
+*.tgz
+
+!/docs
