@@ -3,13 +3,18 @@ kind: Pod
 metadata:
   name: "{{ include "happyhelm.fullname" . }}-test-connection"
   labels:
-    {{- include "happyhelm.labels" . | nindent 4 }}
+    app.kubernetes.io/name: {{ include "happyhelm.name" . }}
+    helm.sh/chart: {{ include "happyhelm.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
   annotations:
-    "helm.sh/hook": test
+    "helm.sh/hook": test-success
 spec:
   containers:
-    - name: wget
-      image: busybox
-      command: ['wget']
-      args: ['{{ include "happyhelm.fullname" . }}:{{ .Values.service.port }}']
+  - name: curl
+    image: appropriate/curl
+    command:
+    - curl
+    args:
+    - https://{{ include "happyhelm.fullname" . }}:{{ .Values.service.port }}
   restartPolicy: Never
