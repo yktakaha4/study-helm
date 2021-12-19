@@ -1,0 +1,17 @@
+apiVersion: v1
+entries:
+  happyhelm:
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: "2021-12-19T22:09:45.401050762+09:00"
+    description: Echo Happy Helming.
+    digest: ab5810c94bdce70157e9cae1450af12eeab83cf257da2a569ac9f31fcbab2523
+    maintainers:
+    - name: go_vargo
+    name: happyhelm
+    sources:
+    - https://github.com/yktakaha4/study-helm
+    urls:
+    - https://yktakaha4.github.io/study-helm/happyhelm-1.0.0.tgz
+    version: 1.0.0
+generated: "2021-12-19T22:09:45.400601717+09:00"

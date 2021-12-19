@@ -4,6 +4,6 @@ version: 1.0.0
 appVersion: 1.0.0
 description: Echo Happy Helming.
 sources:
-- https://github.govargo/go-happyhelming
+- https://github.com/yktakaha4/study-helm
 maintainers:
 - name: go_vargo
